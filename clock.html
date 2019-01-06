@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>時鐘</title>
+    <link rel="stylesheet" href="CSS/clock.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".hamburger").click(function () {
+                $(this).toggleClass("is-active");
+            });
+            $(".hamburger").click(function () {
+            $(".sidemenu").toggleClass("sidemenu-active");
+        });
+        });
+        function date_time(id) {
+            date = new Date;
+            year = date.getFullYear();
+            month = date.getMonth();
+            months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+            d = date.getDate();
+            day = date.getDay();
+            days = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+            h = date.getHours();
+            if (h < 10) {
+                h = "0" + h;
+            }
+            m = date.getMinutes();
+            if (m < 10) {
+                m = "0" + m;
+            }
+            s = date.getSeconds();
+            if (s < 10) {
+                s = "0" + s;
+            }
+            result = '' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
+            document.getElementById(id).innerHTML = result;
+            setTimeout('date_time("' + id + '");', '1000');
+            return true;
+        }</script>
+ 
+</head>
+
+<body>
+    <span id="date_time" class="clock"></span>
+    <script type="text/javascript">window.onload = date_time('date_time');</script>
+    <button class="roundbutton">
+        <div class="hamburger" id="hamburger-1">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </button>
+    <div class="sidemenu">
+        <p class="settingtitle">Background</p>
+        <hr width="400" size="1">
+        <button class="bgcolorbutton" style="background-color:red;" onclick="red()"></button>
+        <button class="bgcolorbutton" style="background-color:orangered;" onclick="orangered()"></button>
+        <button class="bgcolorbutton" style="background-color:yellow;" onclick="yellow()"></button>
+        <button class="bgcolorbutton" style="background-color:green;" onclick="green()"></button>
+        <button class="bgcolorbutton" style="background-color:blue;" onclick="blue()"></button>
+        <button class="bgcolorbutton" style="background-color:blueviolet;" onclick="blueviolet()"></button>
+        <button class="bgcolorbutton" style="background-color:violet;" onclick="violet()"></button>
+        <button class="bgcolorbutton" style="background-color:white;" onclick="white()"></button>
+        <button class="bgcolorbutton" style="background-color:grey;" onclick="grey()"></button>
+        <button class="bgcolorbutton" style="background-color:black;" onclick="black()"></button>
+        <p class="settingtitle">Font</p>
+        <hr width="400" size="1">
+        <button></button>
+        <button></button>
+    </div>
+    <script src="JS/clock.js"></script>
+</body>
+
+</html>

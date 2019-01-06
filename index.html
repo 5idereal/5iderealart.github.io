@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首頁</title>
-    <link rel="icon" href="PHOTOS/XXX.png"/>
-    <link href="CSS/index.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $(".hamburger").click(function(){
-          $(this).toggleClass("is-active");
-        });
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <link rel="icon" href="PHOTOS/XXX.png" />
+  <link href="CSS/index.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".hamburger").click(function () {
+        $(this).toggleClass("is-active");
       });
-    </script>
+      $("#button").click(function () {
+        $('.transform').toggleClass('transform-active');
+      });
+    });
+  </script>
 </head>
 <body>
-    <canvas id='canv' class="dotdotdot"></canvas>
-    <script src="JS/index.js"></script>
-    <a href="about" class="menulink">關於我</a>
-    <a href="DVB"  class="menulink">D&V Bookstore</a>
-    <button class="roundbutton">
+  <canvas id='canv' class="dotdotdot"></canvas>
+  <script src="JS/index.js"></script>
+  <button class="roundbutton">
     <div class="hamburger" id="hamburger-1">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+    <div class="linkdiv">
+      <div class="roundicon">
+        <img src="Icon/user.png">
       </div>
-    </button>
+      <a href="about" class="menulink">關於我</a>
+      <div class="roundicon">
+        <img src="Icon/book.png">
+      </div>
+      <a href="DVB" class="menulink">D&V Bookstore</a>
+      <div class="roundicon">
+        <img src="Icon/clock.png">
+      </div>
+      <a href="DVB" class="menulink">時鐘</a>
+      <div class="roundicon">
+        <img src="Icon/video.png">
+      </div>
+      <a href="DVB" class="menulink">作品</a>
+    </div>
+  </button>
 </body>
 </html>
