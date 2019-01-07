@@ -28,3 +28,8 @@ function grey() {
 function black() {
     document.body.style.backgroundColor = "black";
 }
+
+  var goFS = document.getElementById("goFS");
+  goFS.addEventListener("click", function() {
+      document.body.requestFullscreen();
+  }, false);
