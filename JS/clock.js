@@ -33,7 +33,11 @@ function black() {
   goFS.addEventListener("click", function() {
       document.documentElement.requestFullscreen();
   }, false);
-
+  
   window.addEventListener("load",function() {
-setTimeout(window.scrollTo(0,1),100);
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
 });
