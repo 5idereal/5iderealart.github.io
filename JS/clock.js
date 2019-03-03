@@ -28,16 +28,39 @@ function grey() {
 function black() {
     document.body.style.backgroundColor = "black";
 }
+function rubik() {
+    document.getElementById('date_time').className = ' clock Rubik';
+}
 
-  var goFS = document.getElementById("goFS");
-  goFS.addEventListener("click", function() {
-      document.documentElement.requestFullscreen();
-  }, false);
-  
-  window.addEventListener("load",function() {
-	// Set a timeout...
-	setTimeout(function(){
-		// Hide the address bar!
-		window.scrollTo(0, 1);
-	}, 0);
+function indie_flower() {
+    document.getElementById('date_time').className = ' clock Indie_flower';
+}
+var goFS = document.getElementById("goFS");
+goFS.addEventListener("click", function () {
+    document.documentElement.requestFullscreen();
+}, false);
+
+$(document).ready(function () {
+    adaptColor('.cover-info');
 });
+
+function adaptColor(selector) {
+    var rgb = $(selector).css("background-color");
+
+    if (rgb.match(/^rgb/)) {
+        var a = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/),
+            r = a[1],
+            g = a[2],
+            b = a[3];
+    }
+    var hsp = Math.sqrt(
+        0.299 * (r * r) +
+        0.587 * (g * g) +
+        0.114 * (b * b)
+    );
+    if (hsp > 127.5) {
+        $(selector).addClass('text-black');
+    } else {
+        $(selector).addClass('text-white');
+    }
+};

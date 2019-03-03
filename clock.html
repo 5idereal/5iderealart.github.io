@@ -9,14 +9,16 @@
     <title>時鐘</title>
     <link rel="stylesheet" href="CSS/clock.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Indie+Flower" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $(".hamburger").click(function () {
                 $(this).toggleClass("is-active");
             });
             $(".hamburger").click(function () {
-            $(".sidemenu").toggleClass("sidemenu-active");
-        });
+                $(".sidemenu").toggleClass("sidemenu-active");
+            });
         });
         function date_time(id) {
             date = new Date;
@@ -38,16 +40,18 @@
             if (s < 10) {
                 s = "0" + s;
             }
-            result = '' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
+            result = /*' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + */h + ':' + m + ':' + s;
             document.getElementById(id).innerHTML = result;
             setTimeout('date_time("' + id + '");', '1000');
             return true;
         }</script>
- 
+
 </head>
 
 <body>
-    <span id="date_time" class="clock"></span>
+    <div class="center">
+    <span id="date_time" class="clock text-black"></span>
+</div>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
     <button class="roundbutton">
         <div class="hamburger" id="hamburger-1">
@@ -71,9 +75,10 @@
         <button class="bgcolorbutton" style="background-color:black;" onclick="black()"></button>
         <p class="settingtitle">Font</p>
         <hr width="400" size="1">
-        <button></button>
-        <button></button>
-        <button id="goFS">fullscreen for computer</button>
+        <button class="fontbutton" onclick="rubik()">Rubik</button>
+        <button class="fontbutton" onclick="indie_flower()">Indie Flower</button>
+        <input onclick='responsiveVoice.speak("Its twelve oclock pm.");' type='button' value='Play' />
+        <button id="goFS">Fullscreen</button>
     </div>
     <script src="JS/clock.js"></script>
 </body>
