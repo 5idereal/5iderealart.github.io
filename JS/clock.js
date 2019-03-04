@@ -44,6 +44,16 @@ $(document).ready(function () {
     adaptColor('.cover-info');
 });
 
+$(".roundbutton").delay(1000).fadeTo(3000, 0);
+$(".roundbutton").on({
+    mouseleave: function() {
+        $(this).delay(1000).fadeTo(3000, 0);
+    },
+    mouseenter: function() {
+        $(this).stop().fadeTo(10, 1);
+    }
+});
+
 function adaptColor(selector) {
     var rgb = $(selector).css("background-color");
 
