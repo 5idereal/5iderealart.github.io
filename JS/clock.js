@@ -1,4 +1,4 @@
-function red() {
+/*function red() {
     document.body.style.backgroundColor = "red";
 }
 function orangered() {
@@ -18,16 +18,55 @@ function blueviolet() {
 }
 function violet() {
     document.body.style.backgroundColor = "violet";
-}
+}*/
 function white() {
     document.body.style.backgroundColor = "white";
 }
-function grey() {
+/*function grey() {
     document.body.style.backgroundColor = "grey";
 }
 function black() {
     document.body.style.backgroundColor = "black";
-}
+*/
+$("#red").click(function () {
+    $('body').removeClass();
+    $('body').addClass('red');
+});
+
+$("#orange").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class2');
+});
+
+$("#yellow").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+
+$("#green").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+$("#blue").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+$("#purple").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+$("#pink").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+$("#grey").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
+$("#black").click(function () {
+    $('body').removeClass();
+    $('body').addClass('class3');
+});
 function rubik() {
     document.getElementById('date_time').className = ' clock Rubik';
 }
@@ -46,10 +85,10 @@ $(document).ready(function () {
 
 $(".roundbutton").delay(1000).fadeTo(3000, 0);
 $(".roundbutton").on({
-    mouseleave: function() {
+    mouseleave: function () {
         $(this).delay(1000).fadeTo(3000, 0);
     },
-    mouseenter: function() {
+    mouseenter: function () {
         $(this).stop().fadeTo(10, 1);
     }
 });
