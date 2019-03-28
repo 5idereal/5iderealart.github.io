@@ -16,7 +16,15 @@ p {
     -ms-user-select: none;
     /* Internet Explorer/Edge */
     user-select: none;
-    /* Non-prefixed version, currently                                       supported by Chrome and Opera */
+    /* Non-prefixed version, currently
+    supported by Chrome and Opera */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .score1 {
@@ -24,7 +32,7 @@ p {
     height: 100%;
     transition-duration: 0.2s;
     border-radius: 35px;
-    left:0;
+    left: 0;
     position: absolute;
 }
 
@@ -36,12 +44,13 @@ p {
     font-size: 400px;
     font-family: 微軟正黑體;
 }
+
 .score2 {
     width: 50%;
     height: 100%;
     transition-duration: 0.2s;
     border-radius: 35px;
-    right:0;
+    right: 0;
     position: absolute;
 }
 
@@ -52,8 +61,8 @@ p {
     color: white;
     font-size: 400px;
     font-family: 微軟正黑體;
-    
 }
-.clearbutton{
+
+.clearbutton {
     position: relative;
 }
