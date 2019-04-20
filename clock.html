@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible">
     <meta name="mobile-web-app-capable" content="yes">
     <title>時鐘</title>
     <link rel="stylesheet" href="CSS/clock.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Indie+Flower" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $(".hamburger").click(function () {
                 $(this).toggleClass("is-active");
             });
             $(".hamburger").click(function () {
-            $(".sidemenu").toggleClass("sidemenu-active");
-        });
+                $(".sidemenu").toggleClass("sidemenu-active");
+            });
         });
         function date_time(id) {
             date = new Date;
@@ -38,16 +39,18 @@
             if (s < 10) {
                 s = "0" + s;
             }
-            result = '' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + h + ':' + m + ':' + s;
+            result = /*' + days[day] + ' ' + months[month] + ' ' + d + ' ' + year + ' ' + */h + ':' + m + ':' + s;
             document.getElementById(id).innerHTML = result;
             setTimeout('date_time("' + id + '");', '1000');
             return true;
         }</script>
- 
+
 </head>
 
 <body>
-    <span id="date_time" class="clock"></span>
+    <div class="center">
+    <span id="date_time" class="clock text-black"></span>
+</div>
     <script type="text/javascript">window.onload = date_time('date_time');</script>
     <button class="roundbutton">
         <div class="hamburger" id="hamburger-1">
@@ -59,21 +62,23 @@
     <div class="sidemenu">
         <p class="settingtitle">Background</p>
         <hr width="400" size="1">
-        <button class="bgcolorbutton" style="background-color:red;" onclick="red()"></button>
-        <button class="bgcolorbutton" style="background-color:orangered;" onclick="orangered()"></button>
-        <button class="bgcolorbutton" style="background-color:yellow;" onclick="yellow()"></button>
-        <button class="bgcolorbutton" style="background-color:green;" onclick="green()"></button>
-        <button class="bgcolorbutton" style="background-color:blue;" onclick="blue()"></button>
-        <button class="bgcolorbutton" style="background-color:blueviolet;" onclick="blueviolet()"></button>
-        <button class="bgcolorbutton" style="background-color:violet;" onclick="violet()"></button>
+        <button id="red" class="bgcolorbutton" style="background-color:red;" ></button>
+        <button id="orange" class="bgcolorbutton" style="background-color:orangered;"></button>
+        <button id="yellow" class="bgcolorbutton" style="background-color:yellow;" ></button>
+        <button id="green" class="bgcolorbutton" style="background-color:green;"></button>
+        <button id="blue" class="bgcolorbutton" style="background-color:blue;"></button>
+        <button id="purple" class="bgcolorbutton" style="background-color:blueviolet;"></button>
+        <button id="pink" class="bgcolorbutton" style="background-color:violet;"></button>
         <button class="bgcolorbutton" style="background-color:white;" onclick="white()"></button>
-        <button class="bgcolorbutton" style="background-color:grey;" onclick="grey()"></button>
-        <button class="bgcolorbutton" style="background-color:black;" onclick="black()"></button>
+        <button id="grey" class="bgcolorbutton" style="background-color:grey;"></button>
+        <button id="black" class="bgcolorbutton" style="background-color:black;"></button>
         <p class="settingtitle">Font</p>
         <hr width="400" size="1">
-        <button></button>
-        <button></button>
-        <button id="goFS">fullscreen for computer</button>
+        <button class="fontbutton" onclick="rubik()">Rubik</button>
+        <button class="fontbutton" onclick="indie_flower()">Indie Flower</button>
+        <button class="fontbutton" onclick=""></button>
+        <input onclick='responsiveVoice.speak("Its twelve oclock pm.");' type='button' value='Play' />
+        <button id="goFS">Fullscreen</button>
     </div>
     <script src="JS/clock.js"></script>
 </body>
