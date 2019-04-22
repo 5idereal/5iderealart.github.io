@@ -66,3 +66,11 @@ div {
 .clearbutton {
     position: relative;
 }
+
+#board1{
+    background-color:#9639cc;
+}
+
+#board2{
+    background-color:#0766ff;
+}
