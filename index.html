@@ -13,9 +13,10 @@
       $(".hamburger").click(function () {
         $(this).toggleClass("is-active");
       });
-      $("#button").click(function () {
-        $('.transform').toggleClass('transform-active');
-      });
+
+      $(".hamburger").click(function () {
+                $(".linkdiv").toggleClass("linkdivactive");
+            });
     });
   </script>
 </head>
@@ -40,11 +41,15 @@
       <div class="roundicon">
         <img src="Icon/clock.png">
       </div>
-      <a href="DVB" class="menulink">時鐘</a>
+      <a href="clock" class="menulink">時鐘</a>
       <div class="roundicon">
         <img src="Icon/video.png">
       </div>
       <a href="DVB" class="menulink">作品</a>
+      <div class="roundicon">
+        <img src="Icon/scoreboard.png">
+      </div>
+      <a href="scoreboard" class="menulink">記分板</a>
     </div>
   </button>
 </body>
