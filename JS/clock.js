@@ -70,7 +70,10 @@ $("#black").click(function () {
 function rubik() {
     document.getElementById('date_time').className = ' clock Rubik';
 }
+function reload(){
+reload(true);
 
+}
 function indie_flower() {
     document.getElementById('date_time').className = ' clock Indie_flower';
 }
