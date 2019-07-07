@@ -71,8 +71,7 @@ function rubik() {
     document.getElementById('date_time').className = ' clock Rubik';
 }
 function Reload(){
-reload(true);
-
+location.reload(true);
 }
 function indie_flower() {
     document.getElementById('date_time').className = ' clock Indie_flower';
