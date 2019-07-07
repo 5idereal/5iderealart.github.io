@@ -70,7 +70,7 @@ $("#black").click(function () {
 function rubik() {
     document.getElementById('date_time').className = ' clock Rubik';
 }
-function reload(){
+function Reload(){
 reload(true);
 
 }
