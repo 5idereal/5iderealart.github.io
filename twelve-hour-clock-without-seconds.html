@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="CSS/flipclock.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="JS/flipclock.min.js"></script>	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link href="https://fonts.googleapis.com/css?family=Heebo:900&display=swap" rel="stylesheet">
+		<title>Flip Clock no seconds</title>	
+		<style>body{
+			background-color:black;
+		}
+		.flip-clock-wrapper ul {
+			margin-left:0px !important;
+			margin-right:2px !important;
+		}
+		a{
+			font-family: 'Heebo', sans-serif;
+		}
+		.flip-clock-wrapper ul li a div.up:after{
+			background-color:#000 !important;
+		}
+		.flip-clock-wrapper ul li a div div.inn{
+			text-shadow:none;
+			font-size:85px;
+			padding-top:5px;
+		}
+		</style>
+                                                                                                                                       
+	</head>
+	<body>
+		<div class="clock" style="margin:2em;zoom:4;
+		-moz-transform: scale(4)"></div>
+		<script type="text/javascript">
+			var clock;
+			
+			$(document).ready(function() {
+				clock = $('.clock').FlipClock({
+					clockFace: 'TwelveHourClock',
+					showSeconds: false
+				});
+				$( ".flip-clock-divider" ).remove();
+			});
+		</script>
+		
+	</body>
+</html>
