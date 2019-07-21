@@ -2,83 +2,92 @@
 <html>
 
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Inspiration Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <style>
         .btn {
-  border-radius: 4px;
-  border: 2px solid #009CD0;
-  color: #009CD0;
-  display: inline-block;
-  margin: 0 .25em;
-  overflow: hidden;
-  padding: 24px 60px 24px 16px;
-  position: relative;
-  text-decoration: none;
-  line-height: 1;
-}
-.btn .btn-content {
-  font-size: 1em;
-  line-height: 1.2;
-  padding: 0 26px;
-  position: relative;
-  right: 0;
-  transition: right 300ms ease;
-  display: block;
-  text-align: left;
-}
-.btn .icon {
-  border-left: 1px solid #009CD0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 50%;
-  transition: all 300ms ease;
-  transform: translateY(-50%);
-  width: 58px;
-  height: 70%;
-}
-.btn .icon i {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.btn:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index:-20;
-  transition: opacity 300ms ease;
-}
-.btn:hover .btn-content {
-  right: 100%;
-}
-.btn:hover .icon {
-  border-left: 0;
-  font-size: 1.8em;
-  width: 100%;
-  z-index:20;
-}
-body{
-background-image:url('https://source.unsplash.com/random/1920x1080');
-background-repeat:no-repeat;
-}
+            border-radius: 4px;
+            border: 2px solid #009CD0;
+            color: #009CD0;
+            display: inline-block;
+            margin: 0 .25em;
+            overflow: hidden;
+            padding: 24px 60px 24px 16px;
+            position: relative;
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        .btn .btn-content {
+            font-size: 1em;
+            line-height: 1.2;
+            padding: 0 26px;
+            position: relative;
+            right: 0;
+            transition: right 300ms ease;
+            display: block;
+            text-align: left;
+        }
+
+        .btn .icon {
+            border-left: 1px solid #009CD0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 50%;
+            transition: all 300ms ease;
+            transform: translateY(-50%);
+            width: 58px;
+            height: 70%;
+        }
+
+        .btn .icon i {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -20;
+            transition: opacity 300ms ease;
+        }
+
+        .btn:hover .btn-content {
+            right: 100%;
+        }
+
+        .btn:hover .icon {
+            border-left: 0;
+            font-size: 1.8em;
+            width: 100%;
+            z-index: 20;
+        }
+
+        body {
+            background-image: url('https://source.unsplash.com/random/1920x1080');
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
 <body>
-    <p id="mytext" style="font-size :5rem;font-family: 'Permanent Marker', cursive;background-color:yellow;display:inline-block;margin-top:500px;margin-bottom:200px;"></p><br>
+    <p id="mytext"
+        style="font-size :5rem;font-family: 'Permanent Marker', cursive;background-color:yellow;display:inline-block;margin-top:500px;margin-bottom:200px;">
+    </p><br>
     <a href="#" class="btn" onclick="make()">
         <span class="btn-content">Generate Inspiration</span>
         <span class="icon"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
     </a>
     <script>
-var noun = new Array("moon", "earth", "phantom", "star", "sunset", "pearl", "dawn", "mirror", "sand", "ripple", "shadow", "sky", "flower", "throne", "unicorn", "devil", "cloud", "dove", "storm", "raindrop", "spirit", "rainbow", "enemy", "world", "universe", "galaxy", "petal", "truth", "lie", "swan", "maiden", "day", "night", "empire", "desert", "beast", "forest", "labyrinth", "warrior", "ocean", "prisoner", "coward", "child", "water", "sword", "battle", "garden", "messenger", "tunnel", "fool", "crown", "demon", "angel", "law", "clock", "smoke", "cycle", "pendant", "picture", "key", "mountain", "valley", "lagoon", "apprentice", "candle", "twilight", "river", "knife", "flame", "paradox", "banshee", "fountain", "forest", "castle", "palace", "omen", "revolution", "grave", "swamp", "creek", "pond", "bird", "feather", "serpent", "friend", "axe", "peril", "game", "poison", "wizard", "reflection", "secret", "trial", "poem", "fable", "riddle", "god", "string", "city", "paradise", "disease", "cave", "spider", "lightning", "thunder", "thread", "needle", "stone", "elixir", "claw", "symphony", "spark", "reaper", "chronicle", "legend", "pyramid", "cathedral");
+        var noun = new Array("moon", "earth", "phantom", "star", "sunset", "pearl", "dawn", "mirror", "sand", "ripple", "shadow", "sky", "flower", "throne", "unicorn", "devil", "cloud", "dove", "storm", "raindrop", "spirit", "rainbow", "enemy", "world", "universe", "galaxy", "petal", "truth", "lie", "swan", "maiden", "day", "night", "empire", "desert", "beast", "forest", "labyrinth", "warrior", "ocean", "prisoner", "coward", "child", "water", "sword", "battle", "garden", "messenger", "tunnel", "fool", "crown", "demon", "angel", "law", "clock", "smoke", "cycle", "pendant", "picture", "key", "mountain", "valley", "lagoon", "apprentice", "candle", "twilight", "river", "knife", "flame", "paradox", "banshee", "fountain", "forest", "castle", "palace", "omen", "revolution", "grave", "swamp", "creek", "pond", "bird", "feather", "serpent", "friend", "axe", "peril", "game", "poison", "wizard", "reflection", "secret", "trial", "poem", "fable", "riddle", "god", "string", "city", "paradise", "disease", "cave", "spider", "lightning", "thunder", "thread", "needle", "stone", "elixir", "claw", "symphony", "spark", "reaper", "chronicle", "legend", "pyramid", "cathedral");
         var cons = new Array("chaos", "heaven", "hell", "doubt", "hope", "creation", "destruction", "nature", "revenge", "evil", "despair", "fear", "perfection", "happiness", "sadness", "envy", "luck", "pride", "beauty", "truth", "charm", "death", "life", "regret", "love", "hate", "meaning", "shame", "felicity", "bliss", "ignorance", "chance", "war", "peace", "determination", "perseverance", "danger", "magic", "experience", "destitution", "levity", "empathy", "eloquence", "time", "power", "honesty", "responsibility", "solitude", "disappointment", "cheating", "jealousy", "morality", "reality", "philosophy", "art", "boredom", "wisdom", "trust", "ecstasy", "friendship", "justice", "knowledge", "mercy", "society", "virtue");
         var pers = new Array("soul", "body", "heart", "mind", "memory", "emotion", "love", "desire", "tear", "dream", "eye", "chain", "fear", "pain", "smile", "head", "lip", "beauty", "fury", "shackle", "obsession", "passion", "freedom", "destiny", "hand", "fist", "wing", "intention", "home", "hue", "humanity", "fate", "morale", "belief", "palm", "expression", "concern", "pet", "assistant", "humility", "umbrella", "skin", "hero", "pillow", "novel", "pocket", "curiosity", "courage", "tail", "mystery", "loyalty", "bracelet", "necklace", "blood", "youth", "talent");
         var adj = new Array("amber", "jade", "crystal", "doomed", "dark", "mystic", "ghostly", "fiery", "icy", "vacant", "noble", "graceful", "weary", "silver", "golden", "lonely", "elegant", "pure", "quiet", "battered", "solitary", "perfect", "green", "wrinkled", "chosen", "shy", "crimson", "grim", "bloody", "broken", "warm", "violent", "tangled", "twisted", "scenic", "cautious", "disposed", "pale", "vivid", "weak", "firm", "motionless", "cracked", "single", "ancient", "ruined", "lost", "helpless", "courageous", "stone", "thin", "tropical", "scattered", "corrupt", "calm", "ethereal", "fragrant", "white", "black", "beautiful", "remarkable", "deep", "ignorant", "passionate", "magical", "bright", "impossible", "zealous", "cloudy", "invisible");
