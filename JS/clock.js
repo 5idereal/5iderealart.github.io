@@ -35,37 +35,37 @@ $("#red").click(function () {
 
 $("#orange").click(function () {
     $('body').removeClass();
-    $('body').addClass('class2');
+    $('body').addClass('orange');
 });
 
 $("#yellow").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('yellow');
 });
 
 $("#green").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('green');
 });
 $("#blue").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('blue');
 });
 $("#purple").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('purple');
 });
 $("#pink").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('pink');
 });
 $("#grey").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('grey');
 });
 $("#black").click(function () {
     $('body').removeClass();
-    $('body').addClass('class3');
+    $('body').addClass('black');
 });
 function rubik() {
     document.getElementById('date_time').className = ' clock Rubik';

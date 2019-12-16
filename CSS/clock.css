@@ -107,18 +107,114 @@ body {
   font-size: 10em;
 }
 
-.center{
-  display:flex;
-  justify-content:center;
+.center {
+  display: flex;
+  justify-content: center;
   -ms-transform: translateY(150%);
   -webkit-transform: translateY(150%);
   transform: translateY(150%);
 }
 
-.red{
-  background: #c31432;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  transition-duration: 0.5s;
-  transition-timing-function: cubic-bezier(.09, .24, .28, .97);
+.red {
+  background: linear-gradient(270deg, #a30000, #410000);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.orange {
+  background: linear-gradient(270deg, #ff6c35, #d5ab00);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.yellow {
+  background: linear-gradient(270deg, #ffee00, #9b9100);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.green {
+  background: linear-gradient(272deg, #00ff2b, #00450c);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.blue {
+  background: linear-gradient(272deg, #0090d4, #001145);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+.purple{
+  background: linear-gradient(272deg, #6200d4, #250063);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 15s ease infinite;
+-moz-animation: AnimationName 15s ease infinite;
+animation: AnimationName 15s ease infinite;
+}
+
+.pink{
+  background: linear-gradient(272deg, #cb00cc, #670072);
+  background-size: 400% 400%;
+  
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+.grey{
+  background: linear-gradient(272deg, #414141, #7d7d7d);
+  background-size: 400% 400%;
+  
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+.black{
+  background: black;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
